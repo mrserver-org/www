@@ -7,4 +7,4 @@ thanks to [google/zx](https://github.com/google/zx) for the Github Action.
 
 ## License
 
-[GPLv3 License.](LICENSE)
+[GPLv3 License.](https://github.com/mrserver-org/www/blob/gh-pages/LICENSE)
