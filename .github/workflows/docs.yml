@@ -31,7 +31,7 @@ jobs:
         run: npm i
       - name: Built docs
         run: npm run docs:build
-      - name: Move dist to "/"
+      - name: Move dist to "www/"
         run: |
             mkdir -p www
             mv .vitepress/dist/* www/
@@ -41,4 +41,4 @@ jobs:
           path: 'www'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v3
