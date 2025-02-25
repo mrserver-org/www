@@ -32,13 +32,11 @@ jobs:
       - name: Built docs
         run: npm run docs:build
       - name: Move dist to "www/"
-        run: |
-            mkdir -p www
-            mv .vitepress/dist/* www/
+        run: mv .vitepress/dist/* .
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'www'
+          path: '.'
       - name: Wait for 10s
         run: sleep 10
       - name: Deploy to GitHub Pages
