@@ -39,6 +39,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'www'
+      - name: Wait for 10s
+        run: sleep 10
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
