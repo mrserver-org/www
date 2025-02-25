@@ -31,10 +31,14 @@ jobs:
         run: npm i
       - name: Built docs
         run: npm run docs:build
+      - name: Move dist to "/"
+        run: |
+            mkdir -p www
+            mv .vitepress/dist/* www/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'docs'
+          path: 'www'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
